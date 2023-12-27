@@ -1,0 +1,105 @@
+paper-dropdown {
+  position: relative;
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 5px 10px 10px 5px;
+}
+
+.paper-dropdown-box {
+  position: relative;
+  font-weight: 600;
+  padding: 5px 30px 5px 10px;
+  border: 2px solid var(--border-fe-color);
+  background: var(--ele-bg-color);
+  box-shadow: 4px 4px 0 var(--border-fe-color);
+  transition: background 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+  user-select: none;
+  z-index: 1;
+}
+
+.paper-dropdown-box:hover {
+  box-shadow: 0px 0px 0 var(--border-fe-color);
+  background: var(--ele-fg-color);
+  color: var(--ele-bg-color);
+}
+
+.paper-dropdown-box::after {
+  content: '';
+  display: block;
+  position: absolute;
+  color: var(--ele-fg-color);
+  top: calc(50% - 8px);
+  right: 10px;
+  width: 8px;
+  height: 8px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: transparent var(--ele-fg-color) var(--ele-fg-color) transparent;
+  transition: border-color 0.2s ease-in-out;
+  transform: rotate(45deg);
+}
+
+.paper-dropdown-box:hover::after {
+  border-color: transparent var(--ele-bg-color) var(--ele-bg-color) transparent;
+}
+
+.paper-dropdown-list {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 200px;
+  top: 0;
+  left: calc(-50% - 10px);
+  padding: 5px;
+  border: 2px solid var(--ele-fg-color);
+  background: var(--ele-bg-color);
+  box-shadow: 4px 4px 0 var(--border-fe-color);
+  transition: box-shadow 0.2s ease-in-out;
+  z-index: 999;
+}
+
+.paper-dropdown-list:hover {
+  box-shadow: 2px 2px 0 var(--border-fe-color);
+}
+
+.paper-dropdown-list.hide {
+  visibility: hidden;
+}
+
+.paper-dropdown-item {
+  margin: 5px 5px 10px 5px;
+  padding: 5px 10px 5px 5px;
+  height: 24px;
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  justify-content: flex-start;
+  align-items: center;
+  font-weight: 600;
+  border: 2px solid var(--ele-fg-color);
+  color: var(--ele-fg-color);
+  background: var(--ele-bg-color);
+  box-shadow: 4px 4px 0 var(--border-fe-color);
+  transition: background 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.paper-dropdown-item:hover {
+  box-shadow: 0px 0px 0 var(--border-fe-color);
+  background: var(--ele-fg-color);
+  color: var(--ele-bg-color);
+}
+
+.paper-dropdown-item img {
+  height: 24px;
+  width: 24px;
+  margin-left: 5px;
+}
+
+.paper-dropdown-item span {
+  height: 24px;
+  line-height: 24px;
+  user-select: none;
+  padding-left: 8px;
+}

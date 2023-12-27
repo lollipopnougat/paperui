@@ -1,0 +1,24 @@
+.paper-textbox {
+  padding: 8px 16px;
+  color: var(--ele-fg-color);
+  background: var(--ele-bg-color);
+  border: 2px solid var(--border-fe-color);
+  box-shadow: 4px 4px 0 var(--border-fe-color);
+  font-weight: 600;
+  margin: 5px;
+  transition: background 0.2s ease-out, color 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+.paper-textbox::placeholder {
+  color: var(--ele-fg-color);
+}
+
+.paper-textbox:hover {
+  background: var(--ele-active-fg-color);
+  box-shadow: 0px 0px 0 var(--border-fe-color);
+}
+
+.paper-textbox:focus {
+  color: var(--ele-bg-color);
+  background: var(--ele-fg-color);
+  box-shadow: 0px 0px 0 var(--border-fe-color);
+}

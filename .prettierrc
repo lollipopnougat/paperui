@@ -1,0 +1,12 @@
+{
+  "arrowParens": "avoid",
+  "endOfLine": "auto",
+  "htmlWhitespaceSensitivity": "ignore",
+  "printWidth": 160,
+  "proseWrap": "never",
+  "semi": true,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "trailingComma": "none",
+  "useTabs": false
+}

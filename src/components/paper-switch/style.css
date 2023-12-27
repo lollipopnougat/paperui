@@ -1,0 +1,71 @@
+.paper-toggle {
+  padding: 0;
+  display: inline-block;
+  position: relative;
+  top: 2px;
+  width: 32px;
+  height: 16px;
+  background: var(--ele-bg-color);
+  border: 2px solid var(--border-fe-color);
+  box-shadow: 3px 3px 0 var(--border-fe-color);
+  transition: background 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  cursor: pointer;
+  box-sizing: content-box;
+}
+
+.paper-toggle-box {
+  display: inline-flex;
+  vertical-align: middle;
+  margin: 5px;
+}
+
+.paper-toggle:active {
+  background: var(--ele-active-fg-color);
+}
+
+.open .paper-toggle:active {
+  background: var(--ele-active-bg-color);
+}
+
+.paper-toggle::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  background: var(--ele-fg-color);
+  transition: transform 0.2s ease-in-out, background 0.2s ease-in-out;
+}
+
+.paper-toggle-box:hover .paper-toggle {
+  box-shadow: 0px 0px 0 var(--border-fe-color);
+}
+
+.paper-toggle-box:hover .paper-toggle::before {
+  transform: scale(1.5);
+}
+
+.open .paper-toggle {
+  box-shadow: 3px 3px 0 var(--ele-active-fg-color);
+}
+
+.open .paper-toggle::before {
+  transform: translateX(16px);
+  background: var(--ele-bg-color);
+}
+
+.paper-toggle-box.open:hover .paper-toggle::before {
+  transform: translateX(16px) scale(1.5);
+}
+
+.open .paper-toggle {
+  background: var(--ele-fg-color);
+}
+
+.paper-toggle-title {
+  padding-left: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  user-select: none;
+}
